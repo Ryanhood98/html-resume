@@ -1,0 +1,685 @@
+/*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+
+
+
+/* fluid images */
+
+img{
+  max-width:60%;
+  height:auto;
+  
+}
+
+
+/* Design Time Styles  */
+/*
+.container{
+  max-width:480px;
+  margin: 0 auto;
+}
+*/
+
+
+/* Navigation */
+/*
+nav{
+
+  display: flex;
+  justify-content: space-between;
+  margin:0 auto;
+  padding-left:10px;
+  padding-right:10px;
+
+    
+}
+
+nav a:link, nav a:visited {
+	text-decoration: none;
+	text-align: center;
+	background: #262626;
+	color: #fff;
+	border: 1px solid #000;
+}
+nav a:hover {
+    text-decoration: none;
+	text-align: center;
+	background: #fff;
+	color: #262626;
+	border: 1px solid #000
+}*/
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #0d0d0d;
+    overflow: hidden;
+    width:1fr;
+    margin-left:20px;
+    margin-right:20px;
+    margin-bottom:10px;
+    
+    
+   
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #282382;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #807EFB;
+    color: black;
+    
+}
+
+.topnav {
+    background: #D6EBFF;
+    color:#000;
+}
+
+/* Add an active class to highlight the current page */
+.active {
+    background-color: #4CAF50;
+    color: #000;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+/*
+.topnav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  
+  
+}*/
+
+
+/* CSS Grid */
+
+main.container{
+  display: grid;
+  grid-gap: 10px;
+  
+  grid-template-areas:
+    "."
+    "about"
+    "skills"
+    "experience"
+    "education";
+}
+
+#name{
+  grid-area: name;
+}
+#about{
+  grid-area: about;
+}
+#skills{
+  grid-area: skills;
+
+}
+#experience{
+  grid-area: experience;
+}
+#education{
+  grid-area: education;
+}
+
+
+
+/* Global Styles  */
+
+
+
+body{
+    background:#595959;
+    background-color:#282382;
+    font-family: 'Roboto Slab', serif;
+
+}
+
+.container{
+    margin-left:10px;
+    margin-right:10px;
+}
+
+img{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:300px;
+    padding-top:20px;
+    padding-bottom: 10px;
+}
+
+.related-links{
+    
+    list-style:none;
+    text-align:center;
+    padding-right:30px;
+}
+.related-links a {
+  border: 1px solid #000;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.75em;
+  background: #D9FFF6;
+ 
+ 
+}
+
+.related-links a:hover {
+  background:#807EFB;
+}
+
+dl,p{
+    padding-left:40px;
+    padding-right:40px;
+}
+
+dl {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+dt {
+  flex: 1 40%;
+  font-weight: 800;
+  padding: 10px 0;
+  border-bottom: 1px solid #999;
+}
+dd {
+  flex: 1 60%;
+  margin: 0;
+  padding: 10px 0;
+  border-bottom: 1px solid #999;
+}
+
+h1{
+    text-align:center;
+}
+
+/*nav,*/
+section,
+footer{
+    background: #D6EBFF;
+    color:#000;
+    margin-bottom: 20px;
+    margin-left:10px;
+    margin-right:10px;
+    padding-bottom:10px;
+    padding-top:10px;
+}
+
+#name{
+  
+    background: #D6EBFF;
+    color:#000;
+    margin-bottom: 20px;
+    margin-left:10px;
+    margin-right:10px;
+    padding-bottom:10px;
+    
+}
+
+
+
+#description{
+    text-align:center;
+    line-height: 0.1;
+    font-size:40px;
+    
+}
+#Major{
+    text-align:center;
+    line-height: 0.1;
+    font-size:20px;
+    padding-bottom:20px;
+    
+}
+
+
+#about a:link, a:visited{
+    
+    color: #000;
+
+}
+#about ul li{
+   
+    list-style-position: inside;
+ 
+    
+}
+#experience,#education{
+    padding-left:40px;
+    padding-right:40px;
+    
+}
+
+#education{
+    padding-bottom:20px;
+}
+
+#skills h2{
+    padding-left:40px;
+}
+
+#skills ul li{
+    padding-left:40px;
+    padding-right:40px;
+    list-style-position: inside;
+}
+
+#experience a:link, a:visited{
+    
+    color: #000;
+
+}
+
+#experience *[itemprop="jobTitle"], 
+#experience *[itemprop="name"], 
+#experience *[itemprop="url"], 
+#experience *[itemprop="addressLocality"]
+{
+  display:block;
+}
+
+.job:nth-child(-n+3){
+  border-bottom: 1px solid #999;
+  padding-bottom: 20px;
+}
+
+
+footer{
+    color:#fff;
+    background-color:#282382;
+    text-align:center;
+    padding: 20px 0;
+}
+
+
+
+
+/* Media Queries  */
+
+/* When the screen is less than 480 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 485px) {
+  .topnav a {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 485px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+/* First Breakpoint */
+@media only screen and (min-width: 485px){
+    /* Nav */
+    .topnav{
+       
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    }
+    
+    
+}
+/* Second Breakpoint */
+@media only screen and (min-width:768px){
+    main.container{
+        max-width:1fr;
+        grid-template-columns: 50% auto;
+        grid-template-areas:
+        ". ."
+        "about experience"
+        "skills education";
+        
+    }
+    /* Third Breakpoint */
+@media only screen and (min-width:1200px){
+    main.container{
+        max-width:1fr;
+        max-height: 1200px;
+        margin-left:100px;
+        margin-right:100px;
+        margin-top: 20px;
+        
+    
+
+        grid-template-columns: 40% 25% auto;
+        grid-template-areas: 
+        ". . ."
+        "about skills education"
+        "about experience experience"
+    }
+   
+    .topnav{
+        display:none;
+    }
+    
+    dt{
+        text-align: left;
+        padding-left:30px;
+    }
+    dd{
+        text-align: right;
+        padding-right:20px;
+    }
+    
+}
+    
+   
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    -webkit-clip-path: none;
+    clip-path: none;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
